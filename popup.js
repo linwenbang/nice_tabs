@@ -51,7 +51,7 @@ async function loadList(filter) {
 
             // 过滤
             if (filter != undefined && filter.length > 0) {
-                if (tab.title.toLowerCase().indexOf(filter.toLowerCase()) < 0 ||
+                if (tab.title.toLowerCase().indexOf(filter.toLowerCase()) < 0 &&
                     tab.url.toLowerCase().indexOf(filter.toLowerCase()) < 0) {
                     continue
                 }

@@ -9,6 +9,17 @@ searchInput.addEventListener('input', function (event) {
 
 async function loadList(filter) {
     let windows = await chrome.windows.getAll({ populate: true })
+    let currentWindow = await chrome.windows.getCurrent()
+    windows.sort(function (a, b) {
+        if (a.id === currentWindow.id) {
+            return -1;
+        }
+        if (b.id === currentWindow.id) {
+            return 1;
+        }
+        return 0;
+    });
+
     var tabsList = document.getElementById('tabs-list');
     tabsList.innerHTML = '';
 

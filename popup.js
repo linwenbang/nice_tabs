@@ -56,6 +56,7 @@ async function loadList(filter) {
             return bLastAccessed - aLastAccessed;
         });
 
+        let hasTab = false
         for (let tab of tabs) {
             var tabLi = document.createElement('li');
             tabLi.className = "cell"
@@ -67,6 +68,8 @@ async function loadList(filter) {
                     continue
                 }
             }
+
+            hasTab = true
 
             const leftContainer = document.createElement('div');
             leftContainer.className = "container"
@@ -128,6 +131,13 @@ async function loadList(filter) {
                     });
                 }
             });
+            winTabs.appendChild(tabLi);
+        }
+
+        if (!hasTab) {
+            var tabLi = document.createElement('li');
+            tabLi.className = "cell"
+            tabLi.innerHTML = "None"
             winTabs.appendChild(tabLi);
         }
 

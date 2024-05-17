@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     font-size: 14px;
     padding: 10px;
-    background-color: #041C32;
+    background-color: #031220;
     color: #fff;
     min-width: 500px;
     min-height: 300px;
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background-color: #041C32;
+    background-color: #031220;
 }
 
 .search-bar input[type="text"] {
@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb:hover {
     height: 44px;
     font-size: 16px;
     padding: 10px;
-    background-color: #041C32;
+    background-color: #031220;
     color: #fff;
     border: none;
     outline: none;
